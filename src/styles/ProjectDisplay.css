@@ -13,11 +13,6 @@
 	font-size: 35px;
 }
 
-.project img {
-	width: 700px;
-	border-radius: 10px;
-}
-
 .project p {
 	font-size: 40px;
 	color: #3e497a;
@@ -28,7 +23,8 @@
 	color: #3e497a;
 }
 
-img {
+.project img {
 	width: 100%;
-	max-width: 600px;
+	max-width: 400px;
+	border-radius: 10px;
 }
