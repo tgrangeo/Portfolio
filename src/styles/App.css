@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+  width: 100%;
+}
+
+body,
+.wrapper {
+  margin: 0;
+  padding: 0;
+}
