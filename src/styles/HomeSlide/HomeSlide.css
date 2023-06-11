@@ -1,0 +1,79 @@
+body,
+html {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	height: 100%;
+}
+
+.swiper {
+	width: 100%;
+	height: 100vh;
+}
+
+.swiper-container,
+.swiper-wrapper,
+.swiper-slide {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-container,
+.swiper-wrapper,
+.swiper-slide {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: transparent;
+}
+
+
+/* home Slide */
+.homeContent {
+	display: flex;
+	align-items: flex-start;
+	text-align: left;
+}
+
+.homeContent h2 {
+	font-size: 80px;
+	color: #e9d35b;
+	margin: 10px;
+}
+
+.homeContent h1 {
+	font-size: 32px;
+	padding-left: 5px;
+}
+
+.sub svg {
+	font-size: 4vh;
+}
+
+.sub {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.myImage {
+	background-color: #e9d35b;
+	border-radius: 100vh;
+	width: 200px;
+	height: 200px;
+	background-size: contain;
+}
+
+.ImgBorder {
+	padding: 5px;
+	background-color: #e9d35b;
+	border-radius: 100vh;
+	width: 200px;
+	height: 200px;
+}

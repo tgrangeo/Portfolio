@@ -17,7 +17,7 @@ function Footer() {
 					<Email />
 				</a>
 			</div>
-			<p> &copy; 2023 tgrangeo.com</p>
+			<p className='domain'> &copy; 2023 tgrangeo.com</p>
 		</div>
 	)
 }

@@ -4,25 +4,31 @@ import "../styles/Navbar.css"
 import { Reorder } from '@mui/icons-material'
 
 function Navbar() {
-	const [expandNavBar, setExpandNavBar] = useState(false);
+	const [expandNavbar, setExpandNavbar] = useState(false);
+
 	const location = useLocation();
+
 	useEffect(() => {
-		setExpandNavBar(false)
-	}, [location])
+		setExpandNavbar(false);
+	}, [location]);
+
 	return (
-		<div className='navbar' id={expandNavBar ? "open" : "false"}>
+		<div className="navbar" id={expandNavbar ? "open" : "close"}>
 			<div className="toggleButton">
-				<button onClick={() => { setExpandNavBar((prev) => !prev) }}>
+				<button
+					onClick={() => {
+						setExpandNavbar((prev) => !prev);
+					}}
+				>
 					<Reorder />
 				</button>
 			</div>
-			{/* TODO probleme mode telephone link visible quand pas expand */}
-			<div className='links'>
-				<Link className='link' to="/"> Home </Link>
-				<Link className='link' to="/Projects"> Projects </Link>
+			<div className="links">
+				<Link to="/"> Home </Link>
+				<Link to="/Projects"> Projects </Link>
 			</div>
 		</div>
-	)
+	);
 }
 
 export default Navbar

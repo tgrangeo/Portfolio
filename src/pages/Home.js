@@ -1,39 +1,30 @@
 import React from 'react'
-import { LinkedIn, GitHub, Email } from '@mui/icons-material'
+import { Mousewheel } from 'swiper';
+import { Swiper, SwiperSlide } from "swiper/react";
+
+
+import "swiper/css";
 import "../styles/Home.css"
+import "../styles/ProjectDisplay.css"
+import HomeSlide from '../components/HomeSlide/homeSlide.js';
+import SkillSlide from '../components/HomeSlide/skillSlide.js';
 
 function Home() {
+	const swiperConf = {
+		direction: 'vertical',
+		slidesPerView: 1,
+		mousewheel: true,
+		parallax: true,
+		speed: 600,
+		modules: [Mousewheel],
+	}
 	return (
 		<div className='home'>
 			<div className='about'>
-				<h2> HI, My Name is Thomas</h2>
-				<div className="prompt">
-					<p>Student Software Developer</p>
-					<div>
-						<a href="https://github.com/tgrangeo" target="_blank" rel="noreferrer" >
-							<GitHub />
-						</a>
-						<a href="https://www.linkedin.com/in/thomas-grangeon-20a837244/" target="_blank" rel="noreferrer" >
-							<LinkedIn />
-						</a>
-						<a href={`mailto:thomas.grangeon9@gmail.com?subject=${"hello" || ""}&body=${""}`}>
-							<Email />
-						</a>
-					</div>
-				</div>
-			</div>
-			<div className='skills'>
-				<h1>Skills</h1>
-				<ol className='list'>
-					<li className='item'>
-						<h2>Front-end</h2>
-						<span>coming soon</span>
-					</li>
-					<li className='item'>
-						<h2>Back-end</h2>
-						<span>coming soon</span>
-					</li>
-				</ol>
+				<Swiper {...swiperConf}>
+					<SwiperSlide class="swiper-slide"><HomeSlide /></SwiperSlide>
+					<SwiperSlide class="swiper-slide"><SkillSlide /></SwiperSlide>
+				</Swiper>
 			</div>
 		</div>
 	)
