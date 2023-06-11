@@ -1,14 +1,14 @@
 import React from 'react'
 import "../../styles/HomeSlide/HomeSlide.css"
-import { SkillList } from '../../helpers/skillList'
+import { ToolList } from '../../helpers/skillList'
 
-export default function SkillSlide() {
+export default function ToolsSlide() {
 	return (
 		<div className='skills'>
-			<h2>Skills</h2>
+			<h2>Tools</h2>
 			<div className='skillList'>
 
-				{SkillList.map((item) => {
+				{ToolList.map((item) => {
 					return <div className='skillItem'>
 						<div style={{ backgroundImage: `url(${item.image})` }} className='itemImage' />
 						<p>{item.name}</p>
