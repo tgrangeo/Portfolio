@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.94e981be.css",
+    "main.js": "/static/js/main.265bf8e9.js",
+    "static/js/787.b7af92ad.chunk.js": "/static/js/787.b7af92ad.chunk.js",
+    "static/media/trans.png": "/static/media/trans.15b87120689fb57dca7c.png",
+    "static/media/photo_pro_rounded.png": "/static/media/photo_pro_rounded.f368ef3c0d80f63f8148.png",
+    "static/media/pic2.png": "/static/media/pic2.4e655819ad715e473621.png",
+    "static/media/pic4.png": "/static/media/pic4.a9e6dbfc9cda5e4bffbc.png",
+    "static/media/pic3.png": "/static/media/pic3.95d8d47fca4a0904e1bf.png",
+    "static/media/pic1.png": "/static/media/pic1.f6595fcf99bfe7319a69.png",
+    "static/media/pic5.png": "/static/media/pic5.72771405b0b2d0d6e7be.png",
+    "static/media/cc.png": "/static/media/cc.b55f926bc6b3b2232d32.png",
+    "static/media/compagnion.png": "/static/media/compagnion.ee278fc5f55dcc8e462a.png",
+    "static/media/proteins.png": "/static/media/proteins.130d798cb56c076fc139.png",
+    "static/media/react.png": "/static/media/react.f6b89d232c9bc9f828e5.png",
+    "static/media/github.png": "/static/media/github.536294f06a54d76a8f78.png",
+    "static/media/dock.webp": "/static/media/dock.97f28ff91e8bcb695d21.webp",
+    "index.html": "/index.html",
+    "main.94e981be.css.map": "/static/css/main.94e981be.css.map",
+    "main.265bf8e9.js.map": "/static/js/main.265bf8e9.js.map",
+    "787.b7af92ad.chunk.js.map": "/static/js/787.b7af92ad.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.94e981be.css",
+    "static/js/main.265bf8e9.js"
+  ]
+}
