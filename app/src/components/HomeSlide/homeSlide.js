@@ -2,20 +2,20 @@
 import "../../styles/HomeSlide/HomeSlide.css"
 import { School } from '@mui/icons-material'
 import Mypic from "../../assets/photo_pro_rounded.png"
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 export default function HomeSlide() {
 	const [data, setData] = useState(null);
 
-	useEffect(() => {
-		fetch('http://localhost:8080/api/v1/example')
-			.then(response => response.json())
-			.then(json => setData(json))
-			.catch(error => console.error(error));
-	}, []);
+	// useEffect(() => {
+	// 	fetch('http://localhost:8080/api/v1/example')
+	// 		.then(response => response.json())
+	// 		.then(json => setData(json))
+	// 		.catch(error => console.error(error));
+	// }, []);
 
 	function submit() {
-		fetch('http://localhost:8080/api/v1/example')
+		fetch('http://localhost:8080/api/v1/example', { mode: 'cors' })
 			.then(response => response.json())
 			.then(json => setData(json))
 			.catch(error => console.error(error));
