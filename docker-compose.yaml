@@ -9,6 +9,8 @@ services:
       - ./backend:/opt/app/api
     ports:
     - 8080:8080
+    env_file:
+    - .env
   frontend:
     container_name: frontend
     build: ./app
