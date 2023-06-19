@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"io"
 	"log"
 	"net/http"
 	"net/smtp"
@@ -18,18 +19,21 @@ type ContactMe struct {
 	Message string
 }
 
-func hello(w http.ResponseWriter, r *http.Request) {
-	log.Println("hello")
-}
-
-func exampleHandler(w http.ResponseWriter, r *http.Request) {
-	person := "person{Name: \"Shashank\", LastName: \"Tiwari\", Age: 30}"
-
-	jsonResponse, _ := json.Marshal(person)
-	log.Println("hello")
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusOK)
-	w.Write(jsonResponse)
+func downloadCV(w http.ResponseWriter, r *http.Request) {
+	nomFichier := "assets/Thomas_grangeon.pdf"
+	fichier, err := http.Dir("./").Open(nomFichier)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	defer fichier.Close()
+	w.Header().Set("Content-Type", "application/octet-stream")
+	w.Header().Set("Content-Disposition", "attachment; filename="+nomFichier)
+	_, err = io.Copy(w, fichier)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
 }
 
 func contact(w http.ResponseWriter, r *http.Request) {
@@ -56,8 +60,7 @@ func main() {
 	originsOk := handlers.AllowedOrigins([]string{"*"})
 	methodsOk := handlers.AllowedMethods([]string{"GET", "HEAD", "POST", "PUT", "OPTIONS"})
 
-	r.HandleFunc("/api/v1", hello).Methods("POST")
 	r.HandleFunc("/api/v1/contact", contact).Methods("POST")
-	r.HandleFunc("/api/v1/example", exampleHandler).Methods("GET")
+	r.HandleFunc("/api/v1/donwloadCv", downloadCV).Methods("GET")
 	http.ListenAndServe(":8080", handlers.CORS(originsOk, headersOk, methodsOk)(r))
 }
