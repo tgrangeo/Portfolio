@@ -1,31 +1,19 @@
 // import React from 'react'
 import "../../styles/HomeSlide/HomeSlide.css"
-import { School } from '@mui/icons-material'
+import { School, Download } from '@mui/icons-material'
 import Mypic from "../../assets/photo_pro_rounded.png"
-import React, { useState } from 'react';
+import React from 'react';
 
 export default function HomeSlide() {
-	// const [data, setData] = useState(null);
-
-	// useEffect(() => {
-	// 	fetch('http://localhost:8080/api/v1/example')
-	// 		.then(response => response.json())
-	// 		.then(json => setData(json))
-	// 		.catch(error => console.error(error));
-	// }, []);
 
 	function dl() {
 		fetch("http://localhost:8080/api/v1/donwloadCv", {
 			method: "GET",
-			responseType: "blob", // Ajouter cette ligne
+			responseType: "blob",
 		}).then((response) => {
-			// Vérifier si la réponse est réussie
 			if (response.ok) {
-				// Récupérer l'URL du fichier téléchargé depuis l'en-tête de la réponse
-				const disposition = response.headers.get("Content-Disposition");
+				// const disposition = response.headers.get("Content-Disposition");
 				const filename = "cv.pdf"
-
-				// Démarrer le téléchargement du fichier en créant un lien de téléchargement et en déclenchant un clic programmé
 				response.blob().then((blob) => {
 					const url = window.URL.createObjectURL(blob);
 					const link = document.createElement("a");
@@ -55,8 +43,7 @@ export default function HomeSlide() {
 					<h1>Student Software Developer</h1>
 				</div>
 				<div>
-					<button onClick={dl}>Download my CV</button>
-					{/* {data ? <pre>{JSON.stringify(data, null, 2)}</pre> : 'Loading...'} */}
+					<button onClick={dl} className="SendButton"><Download style={{ marginRight: "10px" }} /> Download my CV</button>
 				</div>
 			</div>
 		</div>

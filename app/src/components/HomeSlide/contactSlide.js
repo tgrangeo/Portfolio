@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Send } from '@mui/icons-material'
 import "../../styles/HomeSlide/HomeSlide.css"
 
 export default function ContactSlide() {
@@ -50,7 +51,7 @@ export default function ContactSlide() {
 					}></textarea>
 			</div>
 			<div className="form-group">
-				<button type="submit" onClick={submit} className="SendButton">Send</button>
+				<button type="submit" onClick={submit} className="SendButton"><Send style={{ marginRight: "10px" }} />Send</button>
 			</div>
 			{/* </form> */}
 		</div>

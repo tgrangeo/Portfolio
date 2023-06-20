@@ -60,6 +60,18 @@ html {
 
 }
 
+.dlButton {
+	border-radius: 20px;
+	padding: 1vh;
+	background-color: #e9d35b;
+	border: none;
+	font-size: 2vh;
+}
+
+.dlButton:hover {
+	background-color: #a79842;
+}
+
 .homeContent h2 {
 	font-size: 80px;
 	color: #e9d35b;
@@ -105,9 +117,37 @@ h2 {
 }
 
 
+.projects {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.menu {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin-bottom: 10px;
+}
+
+.menu-item {
+	margin-right: 10px;
+}
+
+.menu-item:last-child {
+	margin-right: 0;
+}
+
+.dropdown-button {
+	align-self: flex-start;
+}
+
 /* // CONTACT */
 .form-group {
-	padding: 10px;
+	padding: 1vh;
+	display: flex;
+	flex-direction: column;
+	align-items: end;
 }
 
 .contact input {
@@ -153,8 +193,15 @@ h2 {
 }
 
 .SendButton {
-	width: 18vh;
-	height: 5vh;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: fit-content;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 20px;
+	padding-left: 20px;
+	height: fit-content;
 	color: #e9d35b;
 	background-color: transparent;
 	border-radius: 100px;
