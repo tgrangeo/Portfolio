@@ -3,15 +3,18 @@ import ProjectItem from '../components/ProjectItem';
 import "../styles/Projects.css";
 import { ProjectList } from '../helpers/ProjectList';
 
-function Projects() {
-	const [elements, setElements] = useState(ProjectList);
-	const [elementsFiltres, setElementsFiltres] = useState([]);
-	const [filter, setFilter] = useState('');
-	const [open, setOpen] = React.useState(false);
 
-	const handleOpen = () => {
-		setOpen(!open);
-	};
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
+
+function Projects() {
+	const [elements] = useState(ProjectList);
+	const [elementsFiltres, setElementsFiltres] = useState([]);
+	const [filter, setFilter] = useState('All');
+
+	const option = [
+		'All', 'Web', 'Mobile', 'Security'
+	];
 
 	useEffect(() => {
 		filtrerElements();
@@ -19,7 +22,7 @@ function Projects() {
 
 	const filtrerElements = () => {
 		const elementsFiltres = elements.filter((element) => {
-			if (filter === "all")
+			if (filter === "All")
 				return element
 			else
 				return element.tags[0] === filter;
@@ -30,24 +33,10 @@ function Projects() {
 
 	return (
 		<div className='projects'>
-			<h1>My Personal Projects</h1>
-			<button onClick={handleOpen}>Dropdown</button>
-			{open ? (
-				<ul className="menu">
-					<li className="menu-item">
-						<button onClick={() => { setFilter("all"); filtrerElements() }}>all</button>
-					</li>
-					<li className="menu-item">
-						<button onClick={() => { setFilter("web"); filtrerElements() }}>web</button>
-					</li>
-					<li className="menu-item">
-						<button onClick={() => { setFilter("mobile"); filtrerElements() }}>mobile</button>
-					</li>
-					<li className="menu-item">
-						<button onClick={() => { setFilter("security"); filtrerElements() }}>security</button>
-					</li>
-				</ul>
-			) : null}
+			<div className='filterRow'>
+				<p className='filterTitle' style={{ paddingRight: "2vh" }}>Category:</p>
+				<Dropdown className='dropdown' options={option} onChange={(value) => { setFilter(value.value); filtrerElements() }} value={filter} />
+			</div>
 			<div className='projectList'>
 				{elementsFiltres.length > 0 ? (
 					elementsFiltres.map((project, idx) => (

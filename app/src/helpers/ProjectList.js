@@ -7,7 +7,7 @@ export const ProjectList = [
 	{
 		name: "Bingo",
 		image: BingoImgList,
-		tags: ["web"],
+		tags: ["Web"],
 		githubLink: "https://github.com/tgrangeo",
 		skills: "Flutter, Dart",
 		resume: "A desktop app to play bingo with your friends (number cardboard not included)"
@@ -15,14 +15,14 @@ export const ProjectList = [
 	{
 		name: "Proteins",
 		image: proteinsImgList,
-		tags: ["mobile"],
+		tags: ["Mobile"],
 		githubLink: "https://github.com/tgrangeo",
 		skills: "Flutter, Dart, three_dart(3D), API",
 		resume: "A phone app to render 3D molecule"
 	},
 	{
 		name: "Compagnion",
-		tags: ["mobile"],
+		tags: ["Mobile"],
 		image: compagnionImgList,
 		githubLink: "https://github.com/tgrangeo",
 		skills: "Flutter, Dart",
@@ -30,7 +30,7 @@ export const ProjectList = [
 	},
 	{
 		name: "Transcendence",
-		tags: ["web"],
+		tags: ["Web"],
 		image: transImgList,
 		githubLink: "https://github.com/tgrangeo",
 		skills: "React, Nest, Docker, etc...",
@@ -38,7 +38,7 @@ export const ProjectList = [
 	},
 	{
 		name: "Portfolio",
-		tags: ["web"],
+		tags: ["Web"],
 		image: transImgList,
 		githubLink: "https://github.com/tgrangeo",
 		skills: "React, Go",
@@ -46,7 +46,7 @@ export const ProjectList = [
 	},
 	{
 		name: "Snowcrash",
-		tags: ["security"],
+		tags: ["Security"],
 		image: transImgList,
 		githubLink: "https://github.com/tgrangeo",
 		skills: "Shell, Reverse Engenering, Shellcode and more",
@@ -54,7 +54,7 @@ export const ProjectList = [
 	},
 	{
 		name: "Rainfall",
-		tags: ["security"],
+		tags: ["Security"],
 		image: transImgList,
 		githubLink: "https://github.com/tgrangeo",
 		skills: "React, Go",
@@ -62,7 +62,7 @@ export const ProjectList = [
 	},
 	{
 		name: "Snowcrash",
-		tags: ["security"],
+		tags: ["Security"],
 		image: transImgList,
 		githubLink: "https://github.com/tgrangeo",
 		skills: "Shell, Reverse Engenering, Shellcode and more",

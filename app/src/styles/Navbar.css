@@ -10,7 +10,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: white;
 }
 
 .navbar a {
@@ -89,28 +88,11 @@
 	}
 }
 
-/* .navbar .link {
+/* .navbar .links {
+	padding-top: 1vh;
+	max-width: 100%;
 	display: inline-block;
 	position: relative;
 	color:
 		#ffffff;
-}
-
-.navbar .link:after {
-	content: '';
-	position: absolute;
-	width: 100%;
-	transform: scaleX(0);
-	height: 2px;
-	bottom: 0;
-	left: 0;
-	background-color:
-		#ffffff;
-	transform-origin: bottom right;
-	transition: transform 0.25s ease-out;
-}
-
-.navbar .link:hover:after {
-	transform: scaleX(1);
-	transform-origin: bottom left;
 } */

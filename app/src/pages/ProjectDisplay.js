@@ -14,7 +14,10 @@ function ProjectDisplay() {
 	const project = ProjectList[id]
 	return (
 		<div className='projectDisplay'>
-			<h1>{project.name}</h1>
+			<div className='header' onclick="location.href='google.com';">
+				<GitHub fontSize='20vh' />
+				<div className='title'>{project.name}</div>
+			</div>
 			<Swiper
 				slidesPerView={1}
 				spaceBetween={50}
@@ -32,9 +35,8 @@ function ProjectDisplay() {
 				})}
 
 			</Swiper>
-			<p><b>Skills: </b>{project.skills}</p>
-			<p><b>Resume: </b>{project.resume}</p>
-			<GitHub />
+			<div className='displaySkills'><b>Skills: </b>{project.skills}</div>
+			<div className='displayResume'><b>Resume: </b>{project.resume}</div>
 		</div>
 	)
 }
