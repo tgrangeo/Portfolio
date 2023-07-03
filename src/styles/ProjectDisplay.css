@@ -1,0 +1,100 @@
+.projectDisplay {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.displaySkills {
+	padding: 2vh;
+	font-size: 24px;
+	color: white;
+}
+
+.projectDisplay .swiper {
+	user-select: none;
+	box-shadow: #49494991;
+	background-color: #333333;
+	max-width: 65%;
+	border-radius: 10px;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+	max-height: 50vh !important;
+}
+
+
+.projectDisplay .swiper-button-prev {
+	color: #e9d35b !important;
+}
+
+.projectDisplay .swiper-button-next {
+	color: #e9d35b !important;
+}
+
+.projectDisplay .swiper-pagination {
+	color: white !important;
+	margin-top: 10px;
+	z-index: 1 !important;
+}
+
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+	flex-direction: row;
+	/* border-bottom:s 5px solid white; */
+	margin-bottom: 2vh;
+}
+
+.projectDisplay svg {
+	color: white;
+	font-size: 80px;
+}
+
+
+.displayResume {
+	font-size: 18px;
+	color: white;
+}
+
+.projectDisplay img {
+	width: 100%;
+	height: 90%;
+	object-fit: contain;
+}
+
+.title {
+	padding-top: 3vh;
+	padding-bottom: 6px;
+	color: white;
+	font-size: 7vh;
+}
+
+@media only screen and (max-width: 600px) {
+	.projectDisplay .swiper {
+		max-width: 90%;
+		border-radius: 10px;
+		padding-top: 1vh;
+		padding-bottom: 1vh;
+		max-height: 26vh !important;
+	}
+
+	.header {
+		margin-bottom: 1vh;
+	}
+
+	.projectDisplay img {
+		width: 70%;
+		height: 90%;
+		object-fit: contain;
+	}
+
+	.projectDisplay svg {
+		font-size: 40px;
+	}
+
+	.title {
+		padding-top: 2vh;
+		font-size: 5vh;
+	}
+}

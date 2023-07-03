@@ -1,0 +1,38 @@
+.footer {
+	position: absolute;
+	display: flex;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+	width: 100%;
+	height: auto;
+	background: transparent;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: row;
+	padding-top: 10px;
+}
+
+.footer svg {
+	color: white;
+	margin: 10px;
+	font-size: 32px;
+	cursor: pointer;
+}
+
+.domain {
+	align-self: right;
+	color: white;
+}
+
+@media only screen and (max-width: 600px) {
+	.footer svg {
+		font-size: 20px;
+		margin: 5px;
+	}
+
+	.domain {
+		font-size: 12px;
+	}
+}
