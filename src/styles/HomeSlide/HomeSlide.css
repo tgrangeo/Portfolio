@@ -9,6 +9,34 @@ html {
 	height: 100vh;
 }
 
+.custom-pagination {
+	position: fixed;
+	background-color: transparent;
+	z-index: 998;
+	width: 20px;
+	height: 15%;
+
+}
+
+.swiper-pagination-bullet {
+	transition: 0.42s !important;
+	width: 1vh;
+	height: 1vh;
+	z-index: 999;
+	text-align: center;
+	line-height: 2vh;
+	font-size: 12px;
+	background: rgb(133, 133, 133);
+}
+
+.swiper-pagination-bullet-active {
+	color: #fff;
+	z-index: 999;
+	height: 35px;
+	border-radius: 10px;
+	background: #e9d35b;
+}
+
 .swiper-container,
 .swiper-wrapper,
 .swiper-slide {
@@ -37,7 +65,7 @@ html {
 /* home Slide */
 .homeContent {
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	text-align: left;
 }
 

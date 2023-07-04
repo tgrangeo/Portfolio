@@ -1,7 +1,8 @@
 import React from 'react'
 import { Mousewheel } from 'swiper';
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { Pagination } from 'swiper';
+import 'swiper/css/pagination';
 
 import "swiper/css";
 import "../styles/Home.css"
@@ -19,10 +20,18 @@ function Home() {
 		mousewheel: true,
 		parallax: true,
 		speed: 600,
-		modules: [Mousewheel],
+		pagination: {
+			el: '.custom-pagination',
+			clickable: true,
+			renderPagination: function (index, className) {
+				return '<div class="' + className + '"></div>';
+			}
+		},
+		modules: [Mousewheel, Pagination],
 	}
 	return (
 		<div className='home'>
+			<div className="custom-pagination"></div>
 			<div className='about'>
 				<Swiper {...swiperConf}>
 					<SwiperSlide class="swiper-slide"><HomeSlide /></SwiperSlide>
