@@ -86,13 +86,30 @@
 	#open .links {
 		flex-direction: row;
 	}
-}
 
-/* .navbar .links {
-	padding-top: 1vh;
-	max-width: 100%;
-	display: inline-block;
-	position: relative;
-	color:
-		#ffffff;
-} */
+	.li {
+		text-decoration: none;
+		letter-spacing: 0.15em;
+		display: inline-block;
+		position: relative;
+		padding-bottom: 6px;
+	}
+
+	.li:after {
+		background: none repeat scroll 0 0 transparent;
+		bottom: 0;
+		content: "";
+		display: block;
+		height: 3px;
+		left: 50%;
+		position: absolute;
+		background: #fff;
+		transition: width 0.3s ease 0s, left 0.3s ease 0s;
+		width: 0;
+	}
+
+	.li:hover:after {
+		width: 100%;
+		left: 0;
+	}
+}

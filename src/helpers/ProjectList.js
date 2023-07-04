@@ -7,6 +7,7 @@ export const ProjectList = [
 	{
 		name: "Bingo",
 		image: BingoImgList,
+		url: "https://github.com/tgrangeo/bingoApp",
 		tags: ["Web"],
 		githubLink: "https://github.com/tgrangeo",
 		skills: "Flutter, Dart",
@@ -16,6 +17,7 @@ export const ProjectList = [
 		name: "Proteins",
 		image: proteinsImgList,
 		tags: ["Mobile"],
+		url: "https://github.com/prownie/swifty-proteins",
 		githubLink: "https://github.com/tgrangeo",
 		skills: "Flutter, Dart, three_dart(3D), API",
 		resume: "A phone app to render 3D molecule"
@@ -23,6 +25,7 @@ export const ProjectList = [
 	{
 		name: "Compagnion",
 		tags: ["Mobile"],
+		url: "https://github.com/tgrangeo/flutter_compagnion",
 		image: compagnionImgList,
 		githubLink: "https://github.com/tgrangeo",
 		skills: "Flutter, Dart",
@@ -31,6 +34,7 @@ export const ProjectList = [
 	{
 		name: "Transcendence",
 		tags: ["Web"],
+		url: "https://github.com/0xAlidy/Ft_Transcendence",
 		image: transImgList,
 		githubLink: "https://github.com/tgrangeo",
 		skills: "React, Nest, Docker, etc...",
@@ -39,33 +43,28 @@ export const ProjectList = [
 	{
 		name: "Portfolio",
 		tags: ["Web"],
+		url: "https://github.com/tgrangeo/Portfolio",
 		image: transImgList,
 		githubLink: "https://github.com/tgrangeo",
 		skills: "React, Go",
 		resume: "my very first portfolio"
 	},
 	{
-		name: "Snowcrash",
-		tags: ["Security"],
-		image: transImgList,
-		githubLink: "https://github.com/tgrangeo",
-		skills: "Shell, Reverse Engenering, Shellcode and more",
-		resume: "part 1/3 initiation security basics"
-	},
-	{
 		name: "Rainfall",
 		tags: ["Security"],
+		url: "https://github.com/jdel-ros/Rainfall",
 		image: transImgList,
 		githubLink: "https://github.com/tgrangeo",
 		skills: "React, Go",
-		resume: "part 2/3 initiation security basics"
+		resume: "part 1/2 initiation security basics"
 	},
 	{
-		name: "Snowcrash",
+		name: "OverRide",
 		tags: ["Security"],
+		url: "https://github.com/jdel-ros/OverRide",
 		image: transImgList,
 		githubLink: "https://github.com/tgrangeo",
 		skills: "Shell, Reverse Engenering, Shellcode and more",
-		resume: "part 3/3 initiation security basics"
+		resume: "part 2/2 initiation security basics"
 	},
 ]

@@ -7,13 +7,13 @@ function Footer() {
 		<div className='footer'>
 			<div>
 
-				<a classNmae="domainLink" href="https://github.com/tgrangeo" target="_blank" rel="noreferrer" >
+				<a className="domainLink" href="https://github.com/tgrangeo" target="_blank" rel="noreferrer" >
 					<GitHub />
 				</a>
 				<a href="https://www.linkedin.com/in/thomas-grangeon-20a837244/" target="_blank" rel="noreferrer" >
 					<LinkedIn />
 				</a>
-				<a href={`mailto:thomas.grangeon9@gmail.com?subject=${"hello" || ""}&body=${""}`}>
+				<a href={`mailto:thomas.grangeon9+Portfolio@gmail.com?subject=${"hello" || ""}&body=${""}`}>
 					<Email />
 				</a>
 			</div>

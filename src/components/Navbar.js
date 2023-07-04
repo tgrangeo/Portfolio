@@ -40,8 +40,8 @@ function Navbar() {
 				</button>
 			</div>
 			<div className="links">
-				<Link to="/"> Home </Link>
-				<Link to="/Projects"> Projects </Link>
+				<Link className="li" to="/"> Home </Link>
+				<Link className="li" to="/Projects"> Projects </Link>
 			</div>
 		</div>
 	);

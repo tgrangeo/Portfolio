@@ -1,12 +1,10 @@
 // import React from 'react'
 import "../../styles/HomeSlide/HomeSlide.css"
-import { School, Download } from '@mui/icons-material'
+import { School } from '@mui/icons-material'
 import Mypic from "../../assets/photo_pro_rounded.png"
 import React from 'react';
 
 export default function HomeSlide() {
-
-
 	return (
 		<div className='homeContent'>
 
@@ -20,6 +18,17 @@ export default function HomeSlide() {
 					<h1>Student Developer</h1>
 				</div>
 			</div>
+
+
+			<div className="scroll-me">
+				<div className="scroll-text">Scroll Me</div>
+				<div className="arrow">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+
 		</div>
 	)
 }

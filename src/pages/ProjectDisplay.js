@@ -14,10 +14,10 @@ function ProjectDisplay() {
 	const project = ProjectList[id]
 	return (
 		<div className='projectDisplay'>
-			<div className='header' onclick={() => window.location.href = 'https://github.com'}>
+			<a className='header' href={project.url} target="_blank" rel="noreferrer">
 				<GitHub />
 				<div className='title'>{project.name}</div>
-			</div>
+			</a>
 			<Swiper
 				slidesPerView={1}
 				spaceBetween={50}
@@ -29,7 +29,7 @@ function ProjectDisplay() {
 				className="mySwiper"
 			>
 				{project.image.map((img) => {
-					return <SwiperSlide>
+					return <SwiperSlide key={img} >
 						<img src={img} alt='' />
 					</SwiperSlide>
 				})}

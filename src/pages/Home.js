@@ -24,7 +24,7 @@ function Home() {
 			el: '.custom-pagination',
 			clickable: true,
 			renderPagination: function (index, className) {
-				return '<div class="' + className + '"></div>';
+				return '<div className="' + className + '"></div>';
 			}
 		},
 		modules: [Mousewheel, Pagination],
@@ -34,11 +34,11 @@ function Home() {
 			<div className="custom-pagination"></div>
 			<div className='about'>
 				<Swiper {...swiperConf}>
-					<SwiperSlide class="swiper-slide"><HomeSlide /></SwiperSlide>
-					<SwiperSlide class="swiper-slide"><SkillSlide /></SwiperSlide>
-					<SwiperSlide class="swiper-slide"><ToolsSlide /></SwiperSlide>
-					<SwiperSlide class="swiper-slide"><AboutSlide /></SwiperSlide>
-					<SwiperSlide class="swiper-slide"><ContactSlide /></SwiperSlide>
+					<SwiperSlide className="swiper-slide"><HomeSlide /></SwiperSlide>
+					<SwiperSlide className="swiper-slide"><SkillSlide /></SwiperSlide>
+					<SwiperSlide className="swiper-slide"><ToolsSlide /></SwiperSlide>
+					<SwiperSlide className="swiper-slide"><AboutSlide /></SwiperSlide>
+					<SwiperSlide className="swiper-slide"><ContactSlide /></SwiperSlide>
 
 				</Swiper>
 			</div>

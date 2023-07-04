@@ -9,7 +9,7 @@ export default function SkillSlide() {
 			<div className='skillList'>
 
 				{SkillList.map((item) => {
-					return <div className='skillItem'>
+					return <div className='skillItem' key={item.name}>
 						<div style={{ backgroundImage: `url(${item.image})` }} className='itemImage' />
 						<p className='itemText'>{item.name}</p>
 					</div>
