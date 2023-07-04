@@ -40,6 +40,18 @@ body,
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
 
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e9d35b;
+  border-radius: 10px;
+}
+
+
 @media (min-width: 720px) {
   .gradient {
     --size: 500px;
