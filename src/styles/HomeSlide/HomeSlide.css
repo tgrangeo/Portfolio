@@ -211,6 +211,10 @@ html {
 	font-size: larger;
 }
 
+.contact a {
+	text-decoration: none;
+}
+
 .SendButton:hover {
 	background-color: #e9d35b;
 	color: black;
