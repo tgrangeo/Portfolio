@@ -99,13 +99,31 @@
 	.projectDisplay .swiper {
 		max-width: 90%;
 		border-radius: 10px;
+		margin-top: 8vh;
 		padding-top: 1vh;
 		padding-bottom: 1vh;
 		max-height: 26vh !important;
 	}
 
 	.header {
-		margin-bottom: 1vh;
+		position: absolute;
+		align-items: baseline;
+		top: 0.2vh;
+		max-width: auto;
+		height: 10vh;
+		z-index: 999;
+	}
+
+	#open~.header:target {
+		z-index: -999;
+	}
+
+	.title {
+		overflow: hidden;
+		white-space: nowrap;
+		mask: linear-gradient(90deg, black 0, black 98%, transparent 100%) alpha;
+		-webkit-mask: linear-gradient(90deg, black 0, black 98%, transparent 100%);
+		max-width: 29vh;
 	}
 
 	.projectDisplay img {

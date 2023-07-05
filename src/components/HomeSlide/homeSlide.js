@@ -15,7 +15,7 @@ export default function HomeSlide() {
 				<div className="slideTitle">Thomas Grangeon</div>
 				<div className='sub'>
 					<School fontSize='60' />
-					<h1>Student Developer</h1>
+					<div className="sub-title">Student Developer</div>
 				</div>
 			</div>
 

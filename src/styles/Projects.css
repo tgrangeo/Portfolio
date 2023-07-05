@@ -1,4 +1,5 @@
 .projects {
+	max-height: 100%;
 	display: flex;
 	flex-direction: column;
 }
@@ -83,15 +84,37 @@
 	}
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
+	.filterRow {
+		position: absolute;
+		align-items: baseline;
+		top: 1.5vh;
+		left: 1px;
+		height: 10vh;
+		z-index: 999;
+	}
+
+
+	.Dropdown-control {
+		padding: 5px 40px 5px 10px !important;
+		align-self: center;
+	}
+
+
 	.projectList {
 		grid-template-columns: 1fr;
-		max-height: calc(var(--vh, 1vh) * 81) !important;
+		max-height: calc(var(--vh, 1vh) * 86) !important;
 		width: 100%;
+		row-gap: 6vh;
+		margin-top: 18px;
+	}
+
+	.projectItem {
+		margin: 0px;
 	}
 
 	.projectItem {
 		width: 300px;
-		height: 300px;
+		height: 260px;
 	}
 }

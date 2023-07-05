@@ -5,28 +5,12 @@ import { Reorder } from '@mui/icons-material'
 
 function Navbar() {
 	const [expandNavbar, setExpandNavbar] = useState(false);
-	const [stylehome, setStylehome] = useState();
-	const [styleproject, setStyleproject] = useState();
 
 	const location = useLocation();
 
 	useEffect(() => {
 		setExpandNavbar(false);
 	}, [location]);
-
-	function isCurrent() {
-		console.log(location.pathname)
-		if (location.pathname === '/') {
-			setStylehome("underlinedTitle")
-			setStyleproject("noneTitle")
-			console.log("hh")
-		}
-		else {
-			console.log("pp")
-			setStylehome("noneTitle")
-			setStyleproject("underlinedTitle")
-		}
-	}
 
 	return (
 		<div className="navbar" id={expandNavbar ? "open" : "close"}>

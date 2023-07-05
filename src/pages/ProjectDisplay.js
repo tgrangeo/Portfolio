@@ -10,6 +10,8 @@ import "swiper/css/navigation";
 import "../styles/ProjectDisplay.css"
 
 function ProjectDisplay() {
+
+
 	const { id } = useParams();
 	const project = ProjectList[id]
 	return (
