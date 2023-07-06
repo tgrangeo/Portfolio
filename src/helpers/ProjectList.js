@@ -1,4 +1,4 @@
-import { BingoImgList } from "./imgList"
+import { BingoImgList, overrideImgList, rainfallImgList } from "./imgList"
 import { transImgList } from "./imgList"
 import { proteinsImgList } from "./imgList"
 import { compagnionImgList } from "./imgList"
@@ -40,20 +40,20 @@ export const ProjectList = [
 		skills: "React, Nest, Docker, etc...",
 		resume: "Last core curriculum project from school, a pong multiplayer navigator game with social interaction"
 	},
-	{
-		name: "Portfolio",
-		tags: ["Web"],
-		url: "https://github.com/tgrangeo/Portfolio",
-		image: transImgList,
-		githubLink: "https://github.com/tgrangeo",
-		skills: "React, Go",
-		resume: "my very first portfolio"
-	},
+	// {
+	// 	name: "Portfolio",
+	// 	tags: ["Web"],
+	// 	url: "https://github.com/tgrangeo/Portfolio",
+	// 	image: transImgList,
+	// 	githubLink: "https://github.com/tgrangeo",
+	// 	skills: "React, Go",
+	// 	resume: "my very first portfolio"
+	// },
 	{
 		name: "Rainfall",
 		tags: ["Security"],
 		url: "https://github.com/jdel-ros/Rainfall",
-		image: transImgList,
+		image: rainfallImgList,
 		githubLink: "https://github.com/tgrangeo",
 		skills: "React, Go",
 		resume: "part 1/2 initiation security basics"
@@ -62,7 +62,7 @@ export const ProjectList = [
 		name: "OverRide",
 		tags: ["Security"],
 		url: "https://github.com/jdel-ros/OverRide",
-		image: transImgList,
+		image: overrideImgList,
 		githubLink: "https://github.com/tgrangeo",
 		skills: "Shell, Reverse Engenering, Shellcode and more",
 		resume: "part 2/2 initiation security basics"

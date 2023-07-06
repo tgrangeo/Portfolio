@@ -1,6 +1,7 @@
 .projectDisplay {
+	height: 94vh;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	flex-direction: column;
 }
@@ -96,6 +97,10 @@
 }
 
 @media only screen and (max-width: 600px) {
+	.projectDisplay {
+		justify-content: center;
+	}
+
 	.projectDisplay .swiper {
 		max-width: 90%;
 		border-radius: 10px;

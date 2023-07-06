@@ -1,9 +1,17 @@
-import Javascript from "../assets/skills/js.png"
-import React from "../assets/skills/react.png"
-import cc from "../assets/skills/cc.png"
-import docker from "../assets/skills/dock.webp"
-import github from "../assets/skills/github.png"
+import Javascript from "../assets/icon/js.png"
+import React from "../assets/icon/react.png"
+import c from "../assets/icon/c.png"
+import flutter from "../assets/icon/flutter.png"
 
+import android_studio from "../assets/icon/android_studio.png"
+import docker from "../assets/icon/dock.webp"
+import virtual_box from "../assets/icon/virtual_box.png"
+import vscode from "../assets/icon/vscode.png"
+import postman from "../assets/icon/postman.png"
+// import github from "../assets/icon/github.png"
+
+
+//TODO: add github to tools
 export const SkillList = [
 	{
 		name: "JavaScript",
@@ -15,7 +23,11 @@ export const SkillList = [
 	},
 	{
 		name: "C",
-		image: cc,
+		image: c,
+	},
+	{
+		name: "Flutter",
+		image: flutter,
 	},
 ]
 
@@ -25,7 +37,19 @@ export const ToolList = [
 		image: docker,
 	},
 	{
-		name: "Github",
-		image: github,
+		name: "Android Studio",
+		image: android_studio,
+	},
+	{
+		name: "Virtual Box",
+		image: virtual_box,
+	},
+	{
+		name: "VS Code",
+		image: vscode,
+	},
+	{
+		name: "Postman",
+		image: postman,
 	},
 ]
