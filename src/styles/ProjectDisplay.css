@@ -13,14 +13,16 @@
 }
 
 .projectDisplay .swiper {
+	position: relative;
 	user-select: none;
 	box-shadow: #49494991;
 	background-color: #333333;
 	max-width: 65%;
+	max-height: 50vh;
 	border-radius: 10px;
 	padding-top: 1vh;
 	padding-bottom: 1vh;
-	max-height: 50vh !important;
+	z-index: 1;
 }
 
 
@@ -35,7 +37,7 @@
 .projectDisplay .swiper-pagination {
 	color: white !important;
 	margin-top: 10px;
-	z-index: 1 !important;
+	z-index: 1;
 }
 
 .header {
@@ -47,7 +49,7 @@
 	margin-bottom: 2vh;
 }
 
-.projectDisplay svg {
+.projectDisplay .header svg {
 	color: white;
 	font-size: 80px;
 }
@@ -59,10 +61,19 @@
 }
 
 .projectDisplay img {
-	width: 100%;
-	height: 90%;
+	max-width: 90%;
+	max-height: 90vh;
 	object-fit: contain;
+	margin-top: 5vh;
 }
+
+.projectDisplay .swiper img {
+	max-width: 90%;
+	max-height: 95%;
+	object-fit: contain;
+	margin-top: 0vh;
+}
+
 
 .title {
 	padding-top: 3vh;
@@ -94,6 +105,36 @@
 .header:hover:after {
 	width: 100%;
 	left: 0;
+}
+
+.zoomImageVisible {
+	display: content;
+	z-index: 99;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	top: 0;
+	left: 0;
+	background-color: #000000e2;
+	width: 100%;
+	height: 100vh;
+}
+
+
+.zoomImageHidden {
+	display: none;
+}
+
+.closeZoom {
+	color: #fff;
+}
+
+.closeButton {
+	padding-top: 1vh;
+	background-color: transparent;
+	border: none;
+	align-self: flex-end;
 }
 
 @media only screen and (max-width: 600px) {
@@ -131,13 +172,7 @@
 		max-width: 29vh;
 	}
 
-	.projectDisplay img {
-		width: 70%;
-		height: 90%;
-		object-fit: contain;
-	}
-
-	.projectDisplay svg {
+	.projectDisplay .header svg {
 		font-size: 40px;
 	}
 

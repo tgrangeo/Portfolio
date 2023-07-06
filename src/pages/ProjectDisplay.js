@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { ProjectList } from '../helpers/ProjectList';
-import { GitHub } from '@mui/icons-material';
+import { GitHub, Close } from '@mui/icons-material';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
 import "swiper/css";
@@ -10,12 +10,23 @@ import "swiper/css/navigation";
 import "../styles/ProjectDisplay.css"
 
 function ProjectDisplay() {
-
-
 	const { id } = useParams();
 	const project = ProjectList[id]
+	const [imgState, setimgState] = useState();
+	const [isVisible, setIsVisible] = useState(false);
+	function zoomHandler(img) {
+		setimgState(img)
+		setIsVisible(true)
+	}
+	function closeZoom() {
+		setIsVisible(false)
+	}
 	return (
 		<div className='projectDisplay'>
+			<div className={isVisible ? 'zoomImageVisible' : 'zoomImageHidden'} >
+				<button className="closeButton" onClick={closeZoom}><Close className='closeZoom' /></button>
+				<img className="zoomedImg" src={imgState} alt='' />
+			</div>
 			<a className='header' href={project.url} target="_blank" rel="noreferrer">
 				<GitHub />
 				<div className='title'>{project.name}</div>
@@ -32,10 +43,9 @@ function ProjectDisplay() {
 			>
 				{project.image.map((img) => {
 					return <SwiperSlide key={img} >
-						<img src={img} alt='' />
+						<img onClick={() => zoomHandler(img)} src={img} alt='' />
 					</SwiperSlide>
 				})}
-
 			</Swiper>
 			<div className='displaySkills'><b>Skills: </b>{project.skills}</div>
 			<div className='displayResume'><b>Resume: </b>{project.resume}</div>

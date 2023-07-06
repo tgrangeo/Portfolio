@@ -18,6 +18,7 @@ function Projects() {
 
 	useEffect(() => {
 		filtrerElements();
+		// eslint-disable-next-line
 	}, [filter]);
 
 	const filtrerElements = () => {
