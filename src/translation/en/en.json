@@ -1,0 +1,26 @@
+{
+	"navbar": {
+		"home": "Home",
+		"project": "Projects"
+	},
+	"homeslide": {
+		"sub": "Student Developer",
+		"scroll": "Scroll"
+	},
+	"skillslide": {
+		"skill": "Skills"
+	},
+	"toolslide": {
+		"tool": "Tools"
+	},
+	"aboutlide": {
+		"about": "About Me",
+		"content": "hi i'm dev"
+	},
+	"contactlide": {
+		"title": "Contact me",
+		"subject": "Object",
+		"message": "Message",
+		"send": "send"
+	}
+}

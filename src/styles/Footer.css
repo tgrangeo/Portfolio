@@ -2,12 +2,11 @@
 	position: absolute;
 	display: flex;
 	left: 0;
-	bottom: 0;
-	right: 0;
+	top: 96.4vh;
 	z-index: 1;
 	width: 100%;
-	height: auto;
-	background: transparent;
+	height: 1vh;
+	background: #222;
 	justify-content: flex-start;
 	align-items: center;
 	flex-direction: row;
@@ -22,7 +21,7 @@
 }
 
 .domain {
-	align-self: right;
+	/* align-self: flex-end; */
 	color: white;
 }
 

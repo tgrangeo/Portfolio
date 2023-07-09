@@ -1,13 +1,12 @@
 // import React from 'react'
 import "../../styles/HomeSlide/HomeSlide.css"
 import { School } from '@mui/icons-material'
-import Mypic from "../../assets/photo_pro_rounded.png"
+import Mypic from "../../assets/avatar.png"
 import React from 'react';
 
 export default function HomeSlide() {
 	return (
 		<div className='homeContent'>
-
 			<div className='ImgBorder'>
 				<div style={{ backgroundImage: `url(${Mypic})` }} className='myImage' />
 			</div>
