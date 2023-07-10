@@ -13,11 +13,11 @@
 	"toolslide": {
 		"tool": "Tools"
 	},
-	"aboutlide": {
+	"aboutslide": {
 		"about": "About Me",
 		"content": "hi i'm dev"
 	},
-	"contactlide": {
+	"contactslide": {
 		"title": "Contact me",
 		"subject": "Object",
 		"message": "Message",

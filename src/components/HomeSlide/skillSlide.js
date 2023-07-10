@@ -1,11 +1,13 @@
 import React from 'react'
 import "../../styles/HomeSlide/HomeSlide.css"
 import { SkillList } from '../../helpers/skillList'
+import { useTranslation } from 'react-i18next';
 
 export default function SkillSlide() {
+	const { t } = useTranslation();
 	return (
 		<div className='skills'>
-			<div className="slideTitle">Skills</div>
+			<div className="slideTitle">{t("skillslide.skill")}</div>
 			<div className='skillList'>
 
 				{SkillList.map((item) => {

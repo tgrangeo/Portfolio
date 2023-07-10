@@ -10,14 +10,14 @@
 	"skillslide": {
 		"skill": "languages"
 	},
-	"toollide": {
+	"toolslide": {
 		"tool": "Outils"
 	},
-	"aboutlide": {
+	"aboutslide": {
 		"about": "a propos",
 		"content": "je suis un dev"
 	},
-	"contactlide": {
+	"contactslide": {
 		"title": "Contactez-moi",
 		"subject": "Objet",
 		"message": "message",

@@ -55,6 +55,33 @@
 	text-align: center;
 }
 
+
+.langRow {
+	position: absolute;
+	right: 2vh;
+	display: flex;
+	flex-direction: row;
+}
+
+.actualLang {
+	font-size: medium;
+	background: transparent;
+	border: solid 2px #e9d35b;
+	color: white;
+	padding: 7px 10px;
+	border-radius: 11px;
+}
+
+.otherLang {
+	font-size: medium;
+	background: transparent;
+	border: solid 2px #fff;
+	color: white;
+	padding: 7px 10px;
+	border-radius: 11px;
+}
+
+
 @media only screen and (max-width: 900px) {
 	.navbar a {
 		width: 70px;
@@ -68,6 +95,20 @@
 
 	#close a {
 		display: none;
+	}
+
+	#close .langRow {
+		display: none;
+	}
+
+	#open .links {
+		padding-top: 10vh;
+	}
+
+	#open .langRow {
+		font-size: larger;
+		padding-top: 20vh;
+		position: inherit;
 	}
 }
 
