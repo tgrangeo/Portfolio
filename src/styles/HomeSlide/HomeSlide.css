@@ -328,21 +328,25 @@ html {
 
 	.skillList {
 		grid-template-columns: repeat(2, 1fr) !important;
+		align-items: center;
+		justify-content: center;
 
 	}
 
 	.skillItem {
-		padding: 20px !important;
+		padding: 15px !important;
+		margin: 0;
+
 	}
 
 	.itemImage {
-		width: 12vh !important;
-		height: 12vh !important;
+		width: 10vh !important;
+		height: 10vh !important;
 
 	}
 
 	.itemText {
-		font-size: 22px;
+		font-size: 16px;
 	}
 
 	.aboutSlide p {
