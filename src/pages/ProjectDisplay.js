@@ -4,6 +4,7 @@ import { ProjectList } from '../helpers/ProjectList';
 import { GitHub, Close } from '@mui/icons-material';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
+import i18next from 'i18next';
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -14,6 +15,7 @@ function ProjectDisplay() {
 	const project = ProjectList[id]
 	const [imgState, setimgState] = useState();
 	const [isVisible, setIsVisible] = useState(false);
+	var current_lang = useState(i18next.language);
 	function zoomHandler(img) {
 		setimgState(img)
 		setIsVisible(true)
@@ -48,7 +50,7 @@ function ProjectDisplay() {
 				})}
 			</Swiper>
 			<div className='displaySkills'><b>Skills: </b>{project.skills}</div>
-			<div className='displayResume'><b>Resume: </b>{project.resume}</div>
+			<div className='displayResume'><b>Resume: </b>{current_lang === 'fr' ? project.resume : project.resume_en}</div>
 		</div>
 	)
 }
