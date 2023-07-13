@@ -54,7 +54,7 @@
 
 .projectDisplay .header svg {
 	color: white;
-	font-size: 80px;
+	font-size: 60px;
 }
 
 
@@ -62,7 +62,7 @@
 	max-width: 70%;
 	font-size: 18px;
 	color: white;
-	margin-bottom: 3vh;
+	margin-bottom: 15vh;
 }
 
 .projectDisplay img {
@@ -171,7 +171,9 @@
 
 	.displayResume {
 		max-height: 1vh;
+		margin-bottom: 100vh;
 		max-width: 92%;
+		font-size: 15px;
 	}
 
 	#open~.header:target {

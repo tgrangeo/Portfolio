@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { ProjectList } from '../helpers/ProjectList';
 import { GitHub, Close } from '@mui/icons-material';
@@ -15,7 +15,11 @@ function ProjectDisplay() {
 	const project = ProjectList[id]
 	const [imgState, setimgState] = useState();
 	const [isVisible, setIsVisible] = useState(false);
-	var current_lang = useState(i18next.language);
+	const [currentLang, setCurrentLang] = useState(i18next.language);
+	useEffect(() => {
+		setCurrentLang(i18next.language);
+		console.log(i18next.language)
+	}, [i18next.language]);
 	function zoomHandler(img) {
 		setimgState(img)
 		setIsVisible(true)
@@ -50,7 +54,7 @@ function ProjectDisplay() {
 				})}
 			</Swiper>
 			<div className='displaySkills'><b>Skills: </b>{project.skills}</div>
-			<div className='displayResume'><b>Resume: </b>{current_lang === 'fr' ? project.resume : project.resume_en}</div>
+			<div className='displayResume'><b>Resume: </b>{currentLang === 'fr' ? project.resume : project.resume_en}</div>
 		</div>
 	)
 }

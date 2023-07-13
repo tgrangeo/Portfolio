@@ -69,18 +69,6 @@ html {
 	text-align: left;
 }
 
-.dlButton {
-	border-radius: 20px;
-	padding: 1vh;
-	background-color: #e9d35b;
-	border: none;
-	font-size: 2vh;
-}
-
-.dlButton:hover {
-	background-color: #a79842;
-}
-
 .homeContent h2 {
 	font-size: 80px;
 	color: #e9d35b;
@@ -131,8 +119,9 @@ html {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	top: 90%;
-	left: 50%;
+	top: 88%;
+	width: 100%;
+	left: 0;
 }
 
 .arrow {
@@ -263,7 +252,9 @@ html {
 
 .aboutSlide {
 	width: 70vh;
-	font-size: 22px;
+	font-size: 20px;
+	white-space: pre-line;
+	text-align: start;
 }
 
 
@@ -282,8 +273,8 @@ html {
 }
 
 .itemImage {
-	width: 16vh;
-	height: 16vh;
+	/* width: 16vh; */
+	height: 12vh;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -334,15 +325,12 @@ html {
 	}
 
 	.skillItem {
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		padding: 15px !important;
-		margin: 0;
-
-	}
-
-	.itemImage {
-		width: 10vh !important;
-		height: 10vh !important;
-
+		margin-right: 0 !important;
 	}
 
 	.itemText {
@@ -362,7 +350,7 @@ html {
 
 	.scroll-me {
 		top: 77%;
-		left: 42%;
+		left: 0;
 	}
 
 	.arrow span {
