@@ -171,7 +171,7 @@
 
 	.displayResume {
 		max-height: 1vh;
-		margin-bottom: 100vh;
+		/* margin-bottom: 100vh; */
 		max-width: 92%;
 		font-size: 15px;
 	}
@@ -195,5 +195,22 @@
 	.title {
 		padding-top: 1vh;
 		font-size: 5vh;
+	}
+
+}
+
+@media only screen and (min-width: 600px) {
+	.contentProject {
+		display: flex;
+		text-align: start;
+		justify-content: center;
+		/* align-content: center; */
+		align-items: baseline;
+		margin: 5vh 20vw 5vh 20vw;
+	}
+
+	.subtitle {
+		font-size: 3vh;
+		margin-bottom: 1vh;
 	}
 }

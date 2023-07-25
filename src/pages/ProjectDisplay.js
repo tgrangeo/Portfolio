@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { ProjectList } from '../helpers/ProjectList';
 import { GitHub, Close } from '@mui/icons-material';
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,29 +8,43 @@ import i18next from 'i18next';
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "../styles/ProjectDisplay.css"
+import "../styles/ProjectDisplay.css";
 
 function ProjectDisplay() {
 	const { id } = useParams();
-	const project = ProjectList[id]
+	const project = ProjectList[id];
 	const [imgState, setimgState] = useState();
 	const [isVisible, setIsVisible] = useState(false);
 	const [currentLang, setCurrentLang] = useState(i18next.language);
+
 	useEffect(() => {
 		setCurrentLang(i18next.language);
-		console.log(i18next.language)
-	}, [i18next.language]);
+		const languageChangeHandler = () => {
+			setCurrentLang(i18next.language);
+		};
+		i18next.on('languageChanged', languageChangeHandler);
+
+		return () => {
+			i18next.off('languageChanged', languageChangeHandler);
+		};
+	}, []);
+
 	function zoomHandler(img) {
-		setimgState(img)
-		setIsVisible(true)
+		setimgState(img);
+		setIsVisible(true);
 	}
 	function closeZoom() {
-		setIsVisible(false)
+		setIsVisible(false);
 	}
+
+	const resumeToDisplay = currentLang === 'fr' ? project.resume : project.resume_en;
+
 	return (
 		<div className='projectDisplay'>
-			<div className={isVisible ? 'zoomImageVisible' : 'zoomImageHidden'} >
-				<button className="closeButton" onClick={closeZoom}><Close className='closeZoom' /></button>
+			<div className={isVisible ? 'zoomImageVisible' : 'zoomImageHidden'}>
+				<button className="closeButton" onClick={closeZoom}>
+					<Close className='closeZoom' />
+				</button>
 				<img className="zoomedImg" src={imgState} alt='' />
 			</div>
 			<a className='header' href={project.url} target="_blank" rel="noreferrer">
@@ -47,16 +61,29 @@ function ProjectDisplay() {
 				modules={[Pagination, Navigation]}
 				className="mySwiper"
 			>
-				{project.image.map((img) => {
-					return <SwiperSlide key={img} >
+				{project.image.map((img) => (
+					<SwiperSlide key={img}>
 						<img onClick={() => zoomHandler(img)} src={img} alt='' />
 					</SwiperSlide>
-				})}
+				))}
 			</Swiper>
-			<div className='displaySkills'><b>Skills: </b>{project.skills}</div>
-			<div className='displayResume'><b>Resume: </b>{currentLang === 'fr' ? project.resume : project.resume_en}</div>
+			<div className='contentProject'>
+				<div className='displaySkills'>
+					<div className='subtitle'><b>Skills: </b></div>
+					<ul>
+						{project.skills.map((skill) => (
+							<li key={skill}>{skill}</li>
+						))}
+					</ul>
+				</div>
+				<div style={{ width: "2vw" }}></div>
+				<div className='displayResume'>
+					<div className='subtitle'><b>Resume: </b></div>
+					{resumeToDisplay}
+				</div>
+			</div>
 		</div>
-	)
+	);
 }
 
-export default ProjectDisplay
+export default ProjectDisplay;

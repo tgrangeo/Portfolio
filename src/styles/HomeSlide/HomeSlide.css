@@ -325,12 +325,10 @@ html {
 	}
 
 	.skillItem {
-
-		display: flex;
-		flex-direction: column;
+		display: block !important;
 		align-items: center;
+		flex-direction: column;
 		padding: 15px !important;
-		margin-right: 0 !important;
 	}
 
 	.itemText {
