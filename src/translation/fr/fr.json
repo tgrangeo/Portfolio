@@ -1,26 +1,26 @@
 {
 	"navbar": {
-		"home": "Acceuil",
+		"home": "Accueil",
 		"project": "Projets"
 	},
 	"homeslide": {
-		"sub": "Etudiant developer",
+		"sub": "Étudiant développeur",
 		"scroll": "défiler vers le bas"
 	},
 	"skillslide": {
-		"skill": "languages"
+		"skill": "Langages"
 	},
 	"toolslide": {
 		"tool": "Outils"
 	},
 	"aboutslide": {
-		"about": "a propos",
-		"content": "Salut, je m'appelle Thomas et je suis un étudiant développeur. J'ai appris à coder à l'école 42 depuis quelques années. Mon objectif en tant que développeur est d'être polyvalent et de m'investir pleinement dans mon travail en 2023.\n    J'adore apprendre de nouvelles choses et vivre de nouvelles expériences. Je vis à Lyon et j'adore cette ville dynamique. En dehors du développement, mes hobbies incluent le gaming, la musique, les films/series/anime. J'apprécie également aider les autres et travailler en équipe.\n    Je suis passionné par le développement, toujours prêt à relever de nouveaux défis et à rester à jour avec les dernières tendances.\nSi vous souhaitez en savoir plus sur mon parcours et mes aspirations professionnelles, n'hésitez pas à me contacter. Je serais ravi de discuter avec vous."
+		"about": "À propos",
+		"content": "Salut, je m'appelle Thomas et je suis un étudiant développeur. J'ai appris à coder à l'école 42 depuis quelques années. Mon objectif en tant que développeur est d'être polyvalent et de m'investir pleinement dans mon travail en 2023.\nJ'adore apprendre de nouvelles choses et vivre de nouvelles expériences. Je vis à Lyon et j'adore cette ville dynamique. En dehors du développement, mes hobbies incluent le gaming, la musique, les films/séries/anime. J'apprécie également aider les autres et travailler en équipe.\nJe suis passionné par le développement, toujours prêt à relever de nouveaux défis et à rester à jour avec les dernières tendances.\nSi vous souhaitez en savoir plus sur mon parcours et mes aspirations professionnelles, n'hésitez pas à me contacter. Je serais ravi de discuter avec vous."
 	},
 	"contactslide": {
 		"title": "Contactez-moi",
 		"subject": "Objet",
-		"message": "message",
-		"send": "envoyer"
+		"message": "Message",
+		"send": "Envoyer"
 	}
 }
